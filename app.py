@@ -10,7 +10,7 @@ with open('data.pickle','rb') as f:
     data = pickle.load(f)
 
 app = dash.Dash()
-
+server = app.server
 cellNames = list(data['cell'].keys())
 
 def strip_uc(v):
@@ -197,6 +197,7 @@ def update_graph(xValue,yValue):
     if yValue is None:
         yValue = 'Anticorrelated model tuning strength'
 
+        
     xData = get_metrics(data,xValue)
     yData = get_metrics(data,yValue)
 
@@ -277,8 +278,7 @@ def update_tcs(clickData):
 
 
 if __name__ == "__main__":
-        
+
     app.run_server(debug=True)
-    
 
 
