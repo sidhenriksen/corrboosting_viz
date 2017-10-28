@@ -8,4 +8,4 @@ activate_env = os.path.expanduser(os.path.join(os.path.dirname(__file__),
 						'venv/bin/activate_this.py'))
 execfile(activate_env, dict(__file__=activate_env))
 
-from corrboosting_viz import app as application
+from app import app as application
