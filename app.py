@@ -198,8 +198,8 @@ def update_graph(xValue,yValue):
         yValue = 'Anticorrelated model tuning strength'
 
         
-    xData = get_metrics(data,xValue)
-    yData = get_metrics(data,yValue)
+    xData = np.round(get_metrics(data,xValue),3)
+    yData = np.round(get_metrics(data,yValue),3)
 
     figure = {
         'data': [
