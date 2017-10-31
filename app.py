@@ -156,8 +156,10 @@ currentCell = 'lemM328c12'
 defaultDropdown = {'x-axis':'Correlated model tuning strength',
                     'y-axis':'Anticorrelated model tuning strength'}
 
+axisNames = {'x-axis':'Horizontal axis','y-axis':'Vertical axis'}
 app.layout = html.Div( children=[
-    html.Div([html.Div(
+    html.Div([html.Div([
+            html.P(axisNames[axisId]),
             dcc.Dropdown(
                 id=axisId,
                 value=defaultDropdown[axisId],
@@ -169,7 +171,7 @@ app.layout = html.Div( children=[
                               'value':'Cell relative anticorrelated response'},
                          {'label':'Model relative anticorrelated response',
                               'value':'Model relative anticorrelated response'}
-                             ]),style={'width':'48%','display':'inline-block'}) \
+                             ])],style={'width':'48%','display':'inline-block'}) \
                   for axisId in ['x-axis','y-axis']
     ],style={'width':'96%','display':'inline-block'}),
     html.Div([
