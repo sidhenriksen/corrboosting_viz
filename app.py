@@ -177,8 +177,8 @@ app.layout = html.Div( children=[
         dcc.Graph(id='main-graph',animate=False)],
         style={'width':'98%'}),
         html.Div([html.Center(html.Div([
-            dcc.Graph(id='tc-graph')],style={'width':'90%'}))
-                ],style={ 'width' : '95%'})
+            dcc.Graph(id='tc-graph')],style={'width':'99%'}))
+                ],style={ 'width' : '100%'})
         ],style={'width':'100%','display':'inline-block'})
     ]
 )
